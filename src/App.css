@@ -4,12 +4,12 @@
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+  height: 10vmin;
 }
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 20vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,8 +18,72 @@
   color: white;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5vh;
+  font-size: calc(10px + 2vmin);
+}
+
 .App-link {
   color: #61dafb;
+}
+
+
+.todoInput {
+  border: 1px solid lightgray;
+  padding: 15px;
+  width: 200px;
+  font-size: 15px;
+  margin-right:5px;
+}
+
+.addButton {
+  background: lightskyblue;
+  color: white;
+  border: 0px; 
+  height: 50px;
+  margin: 0;
+  padding: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.addButton:hover {
+  background: green;
+}
+
+.listItem {
+  width: 250px;
+  height: auto;
+  background-color:lightblue; 
+  margin-top: 2vh;
+  text-align: left;
+  padding: 20px;
+  border-radius: 0px;
+  transition: 0.2s ease-out;
+  animation: createBox .4s;
+  cursor: pointer
+}
+
+.listItem.completed {
+  background-color:pink; 
+  text-decoration:line-through;
+}
+
+.listItem:hover {
+  background: lightgreen;
+}
+
+@keyframes createBox {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 
 @keyframes App-logo-spin {
